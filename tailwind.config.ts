@@ -19,6 +19,8 @@ const config = {
     },
     extend: {
       colors: {
+        blogBackground: "#f2f2f2",
+        blogRed: "#D90416",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
