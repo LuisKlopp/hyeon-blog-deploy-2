@@ -3,6 +3,12 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "../style/globals.css";
 import type { Metadata } from "next";
 
+import { Noto_Sans } from "next/font/google";
+
+const notoSans = Noto_Sans({
+  subsets: ["latin"],
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -10,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" suppressHydrationWarning>
-      <body>
+      <body className={notoSans.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
