@@ -1,8 +1,14 @@
+"use client";
+
+import ThemeChanger from "@/components/theme-changer";
+
 const HomePage = () => {
   return (
-    <div className="w-full h-full bg-blogBackground">
-      <h1>dsfds</h1>
-      <input />
+    <div className="w-full h-full bg-blogBackground dark:bg-blogBlack">
+      <h1 className=" font-semibold">
+        Home Page
+      </h1>
+      <ThemeChanger />
     </div>
   );
 };
