@@ -12,7 +12,7 @@ export const NavigationItem = ({
   return (
     <Link
       href={href}
-      className=" text-blogSoftRed font-semibold"
+      className="dark:text-[#f2f2f2] font-semibold hover:text-blogThickRed dark:hover:text-blogThickRed"
     >
       {title}
     </Link>

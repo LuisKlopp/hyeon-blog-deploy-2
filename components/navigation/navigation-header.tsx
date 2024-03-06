@@ -6,13 +6,15 @@ const NavigationHeader = () => {
   return (
     <div className="w-full h-10 flex justify-between items-center">
       <ThemeChanger />
-      {NAVIGATION_ITEMS.map((item) => (
-        <NavigationItem
-          key={item.title}
-          href={item.href}
-          title={item.title}
-        />
-      ))}
+      <div className="w-2/6 flex justify-between">
+        {NAVIGATION_ITEMS.map((item) => (
+          <NavigationItem
+            key={item.title}
+            href={item.href}
+            title={item.title}
+          />
+        ))}
+      </div>
     </div>
   );
 };

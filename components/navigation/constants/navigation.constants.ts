@@ -9,6 +9,6 @@ export const NAVIGATION_ITEMS = [
   },
   {
     href: "/about-me",
-    title: "About",
+    title: "About-Me",
   },
 ];
