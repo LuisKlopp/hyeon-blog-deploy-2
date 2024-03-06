@@ -4,6 +4,7 @@ import "../style/globals.css";
 import type { Metadata } from "next";
 
 import { Noto_Sans } from "next/font/google";
+import MainLayout from "@/components/main-layout";
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
@@ -25,7 +26,7 @@ export default function RootLayout({
           enableSystem
           storageKey="blog-theme"
         >
-          {children}
+          <MainLayout>{children}</MainLayout>
         </ThemeProvider>
       </body>
     </html>

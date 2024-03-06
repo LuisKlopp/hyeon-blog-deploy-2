@@ -2,21 +2,13 @@
 
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
 
 const ThemeChanger = () => {
   const { setTheme, theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
   const isDarkTheme = theme === "dark";
 
   const handleThemeToggle = () =>
     setTheme(isDarkTheme ? "light" : "dark");
-
-  useEffect(() => {
-    setMounted(true);
-  }, [mounted]);
-
-  if (!mounted) return null;
 
   return (
     <button
@@ -24,7 +16,8 @@ const ThemeChanger = () => {
       type="button"
       onClick={handleThemeToggle}
     >
-      {isDarkTheme ? <Sun /> : <Moon />}
+      <Sun className="h-5 w-5 transition-all dark:hidden" />
+      <Moon className="h-5 w-5 hidden transition-all dark:block" />
     </button>
   );
 };
