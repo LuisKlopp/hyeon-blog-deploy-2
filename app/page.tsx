@@ -1,16 +1,9 @@
-import Image from "next/image";
-import ProfileImage from "../public/me2.png";
+import ProfileImage from "@/components/profile-image";
 
 const HomePage = () => {
   return (
     <>
-      <Image
-        alt="It's me"
-        src={ProfileImage}
-        width={200}
-        className="rounded-3xl"
-        priority
-      />
+      <ProfileImage />
     </>
   );
 };
