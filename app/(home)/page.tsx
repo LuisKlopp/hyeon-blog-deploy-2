@@ -1,10 +1,10 @@
-import ProfileImage from "@/components/profile-image";
+import Profile from "@/components/profile-banner";
 
 const HomePage = () => {
   return (
-    <div>
-      <ProfileImage />
-    </div>
+    <>
+      <Profile />
+    </>
   );
 };
 
