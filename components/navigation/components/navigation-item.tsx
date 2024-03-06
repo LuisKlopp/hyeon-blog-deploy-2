@@ -1,4 +1,8 @@
+"use client";
+
+import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface NavigationItemProps {
   href: string;
@@ -9,10 +13,19 @@ export const NavigationItem = ({
   href,
   title,
 }: NavigationItemProps) => {
+  const pathname = usePathname();
+
   return (
     <Link
       href={href}
-      className="dark:text-[#f2f2f2] font-semibold hover:text-blogThickRed dark:hover:text-blogThickRed"
+      className={
+        (cn(
+          "font-semibold hover:text-blogThickRed",
+        ),
+        pathname.startsWith(href)
+          ? "text-blogThickRed"
+          : "")
+      }
     >
       {title}
     </Link>
