@@ -19,12 +19,10 @@ export const NavigationItem = ({
     <Link
       href={href}
       className={
-        (cn(
-          "font-semibold hover:text-blogThickRed",
-        ),
-        pathname.startsWith(href)
+        (cn("font-extrabold"),
+        pathname === href
           ? "text-blogThickRed"
-          : "")
+          : "hover:text-blogThickRed")
       }
     >
       {title}
