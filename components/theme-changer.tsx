@@ -11,15 +11,13 @@ const ThemeChanger = () => {
     setTheme(isDarkTheme ? "light" : "dark");
 
   return (
-    <div>
-      <button
-        className=""
-        type="button"
-        onClick={handleThemeToggle}
-      >
-        {isDarkTheme ? <Sun /> : <Moon />}
-      </button>
-    </div>
+    <button
+      className=""
+      type="button"
+      onClick={handleThemeToggle}
+    >
+      {isDarkTheme ? <Sun /> : <Moon />}
+    </button>
   );
 };
 

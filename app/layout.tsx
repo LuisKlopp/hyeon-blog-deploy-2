@@ -16,13 +16,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" suppressHydrationWarning>
-      <body className={notoSans.className}>
+      <body
+        className={`${notoSans.className} w-full h-full bg-blogBackground dark:bg-blogBlack max-w-screen-md mx-auto min-w-[320px] transition`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem
           storageKey="blog-theme"
-          disableTransitionOnChange
+          // disableTransitionOnChange
         >
           {children}
         </ThemeProvider>
