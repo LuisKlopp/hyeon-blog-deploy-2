@@ -1,4 +1,4 @@
-import Profile from "@/components/profile-banner";
+import Profile from "@/components/profile/profile-banner";
 
 const HomePage = () => {
   return (
