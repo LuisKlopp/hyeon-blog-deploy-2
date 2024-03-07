@@ -6,7 +6,7 @@ const NavigationHeader = () => {
   return (
     <div className="w-full h-20 flex justify-between items-center px-8">
       <ThemeChanger />
-      <div className="w-[250px] h-full flex justify-between items-center font-semibold">
+      <div className="w-[250px] h-full flex justify-around items-center font-semibold">
         {NAVIGATION_ITEMS.map((item) => (
           <NavigationItem
             key={item.title}
