@@ -19,7 +19,7 @@ export const NavigationItem = ({
     <Link
       href={href}
       className={cn(
-        "hover:text-lg",
+        "hover:scale-125",
         pathname === href
           ? "text-blogThickRed"
           : "hover:text-blogThickRed",

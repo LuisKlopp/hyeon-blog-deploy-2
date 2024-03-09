@@ -3,7 +3,7 @@ import CodeImage from "../../public/koplogo.png";
 
 const PostCard = () => {
   return (
-    <div className="w-full h-40 mt-3 flex justify-between border-2 border-black rounded-2xl overflow-hidden">
+    <div className="h-40 flex justify-between border-2 border-black rounded-2xl overflow-hidden">
       <Image
         alt="post-image"
         src={CodeImage}

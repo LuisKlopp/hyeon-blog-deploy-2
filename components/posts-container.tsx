@@ -2,7 +2,7 @@ import PostCard from "./posts/post-card";
 
 const PostsContainer = () => {
   return (
-    <div className="w-full">
+    <div className="pt-3">
       <PostCard />
       <PostCard />
       <PostCard />
