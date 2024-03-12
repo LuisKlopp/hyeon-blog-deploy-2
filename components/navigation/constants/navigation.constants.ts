@@ -4,8 +4,8 @@ export const NAVIGATION_ITEMS = [
     title: "Home",
   },
   {
-    href: "/post",
-    title: "Post",
+    href: "/blog",
+    title: "Blog",
   },
   {
     href: "/about-me",

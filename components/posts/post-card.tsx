@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CodeImage from "../../public/koplogo.png";
+import CodeImage from "@/pubic/koplogo.png";
 
 const PostCard = () => {
   return (
@@ -7,7 +7,7 @@ const PostCard = () => {
       <Image
         alt="post-image"
         src={CodeImage}
-        className=" rounded-tr-2xl rounded-br-2xl w-[200px] h-auto"
+        className="rounded-tr-2xl rounded-br-2xl w-[200px] h-auto"
       />
       <div className="flex flex-col w-full h-full p-4 px-8 justify-around cursor-pointer">
         <span className="text-2xl font-semibold">
