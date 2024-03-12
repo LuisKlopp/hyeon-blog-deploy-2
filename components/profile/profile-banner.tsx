@@ -1,7 +1,7 @@
 import Image from "next/image";
 import profileImage from "../../public/me3.png";
 
-const Profile = () => {
+const ProfileBanner = () => {
   return (
     <div className="w-full flex justify-around mt-8 py-8">
       <Image
@@ -28,4 +28,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default ProfileBanner;

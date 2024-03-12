@@ -1,5 +1,5 @@
 import { posts } from "#site/content";
-import { PostItem } from "@/components/posts/post-item";
+import { PostCard } from "@/components/posts/post-card";
 
 const BlogPage = async () => {
   const displayPosts = posts;
@@ -27,7 +27,7 @@ const BlogPage = async () => {
             } = post;
             return (
               <li key={slug}>
-                <PostItem
+                <PostCard
                   slug={slug}
                   date={date}
                   title={title}

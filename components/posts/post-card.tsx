@@ -1,28 +1,52 @@
-import Image from "next/image";
-import CodeImage from "@/pubic/koplogo.png";
+import { Calendar } from "lucide-react";
+import Link from "next/link";
+import { formatDate } from "@/lib/utils";
 
-const PostCard = () => {
+interface PostItemProps {
+  slug: string;
+  title: string;
+  description?: string;
+  date: string;
+}
+
+export function PostCard({
+  slug,
+  title,
+  description,
+  date,
+}: PostItemProps) {
   return (
-    <div className="h-40 flex justify-between border-2 border-black rounded-2xl overflow-hidden">
-      <Image
-        alt="post-image"
-        src={CodeImage}
-        className="rounded-tr-2xl rounded-br-2xl w-[200px] h-auto"
-      />
-      <div className="flex flex-col w-full h-full p-4 px-8 justify-around cursor-pointer">
-        <span className="text-2xl font-semibold">
-          Title입니다
-        </span>
-        <span className="text-sm">
-          description입니다.description입니다.description입니다.description입니다.description입니다.
-        </span>
-        <div>
-          <span>날짜입니다.</span>
-          <span>조회수입니다.</span>
-        </div>
+    <article className="flex flex-col gap-2 border-border border-b py-3">
+      <div>
+        <h2 className="text-2xl font-bold">
+          <Link href={slug}>{title}</Link>
+        </h2>
       </div>
-    </div>
+      <div className="max-w-none text-muted-foreground">
+        {description}
+      </div>
+      <div className="flex justify-between items-center">
+        <dl>
+          <dt className="sr-only">
+            Published On
+          </dt>
+          <dd className="text-sm sm:text-base font-medium flex items-center gap-1">
+            <Calendar className="h-4 w-4" />
+            <time dateTime={date}>
+              {formatDate(date)}
+            </time>
+          </dd>
+        </dl>
+        <Link
+          href={slug}
+          //   className={cn(
+          //     buttonVariants({ variant: "link" }),
+          //     "py-0",
+          //   )}
+        >
+          Read more →
+        </Link>
+      </div>
+    </article>
   );
-};
-
-export default PostCard;
+}

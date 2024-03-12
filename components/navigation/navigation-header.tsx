@@ -1,5 +1,5 @@
-import ThemeChanger from "../theme-changer";
-import NavigationItem from "./components/navigation-item";
+import ThemeChanger from "./theme-changer";
+import NavigationItem from "./navigation-item";
 import { NAVIGATION_ITEMS } from "./constants/navigation.constants";
 
 const NavigationHeader = () => {

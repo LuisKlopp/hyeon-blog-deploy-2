@@ -1,4 +1,7 @@
-export const NAVIGATION_ITEMS = [
+export const NAVIGATION_ITEMS: {
+  href: string;
+  title: string;
+}[] = [
   {
     href: "/",
     title: "Home",
