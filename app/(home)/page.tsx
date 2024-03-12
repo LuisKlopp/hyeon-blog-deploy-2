@@ -1,9 +1,9 @@
-import Profile from "@/components/profile/profile-banner";
+import ProfileBanner from "@/components/profile/profile-banner";
 
 const HomePage = () => {
   return (
     <>
-      <Profile />
+      <ProfileBanner />
     </>
   );
 };
