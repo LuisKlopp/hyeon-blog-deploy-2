@@ -1,13 +1,11 @@
 import LucideIcon from "@/components/lucide-icon";
 import { INFORMATION_ITEMS } from "./constants/Information.constants";
 import Link from "next/link";
-import HomeTitle from "../home-title";
 
 const ProfileIntroduction = () => {
   return (
     <div className="flex flex-col justify-between">
-      <HomeTitle label="Profile" />
-      <div className="text-lg font-medium">
+      <div className="text-xl font-medium ">
         안녕하세요! 👋
         <div className="pt-2">
           프론트엔드 개발자{" "}
@@ -27,7 +25,7 @@ const ProfileIntroduction = () => {
             item;
           return (
             <div
-              className="flex gap-2"
+              className="flex gap-2 font-medium"
               key={iconName}
             >
               <LucideIcon name={iconName} />
