@@ -1,12 +1,19 @@
 import ThemeChanger from "./theme-changer";
 import NavigationItem from "./navigation-item";
 import { NAVIGATION_ITEMS } from "./constants/navigation.constants";
+import { cn } from "@/lib/utils";
 
 const NavigationHeader = () => {
   return (
-    <header className="w-full h-20 flex justify-between items-center px-8">
-      <ThemeChanger />
-      <nav className="flex h-full items-center justify-center text-center space-x-2 font-semibold gap-4">
+    <header className="w-full h-16 flex justify-between items-center px-8">
+      <div
+        className={cn(
+          `font-kyobo text-2xl font-black`,
+        )}
+      >
+        Ryu Hyeon
+      </div>
+      <nav className="flex w-[250px] h-full items-center justify-between text-center space-x-2 font-semibold gap-4">
         {NAVIGATION_ITEMS.map((item) => (
           <NavigationItem
             key={item.title}
@@ -15,6 +22,7 @@ const NavigationHeader = () => {
           />
         ))}
       </nav>
+      <ThemeChanger />
     </header>
   );
 };

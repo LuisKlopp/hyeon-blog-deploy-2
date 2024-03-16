@@ -8,7 +8,7 @@ const MainLayout = ({
   children,
 }: MainLayoutProps) => {
   return (
-    <div className="w-full h-full max-w-screen-md mx-auto min-w-[320px]">
+    <div className="w-full h-full">
       <NavigationHeader />
       <hr className=" border-solid border-1 border-[#991a1a]" />
       {children}

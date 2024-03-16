@@ -7,11 +7,11 @@ const ProfileIntroduction = () => {
   return (
     <div className="flex flex-col justify-between">
       <HomeTitle label="Profile" />
-      <div>
+      <div className="text-lg font-medium">
         안녕하세요! 👋
         <div className="pt-2">
           프론트엔드 개발자{" "}
-          <span className="text-xl font-bold">
+          <span className="text-2xl font-dovemayou">
             류현
           </span>
           입니다.

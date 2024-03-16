@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        dovemayou: ["var(--font-dovemayo)"],
+        kyobo: ["var(--font-kyobo)"],
+      },
       colors: {
         blogBackground: "#f2f2f2",
         blogThickRed: "#D90416",

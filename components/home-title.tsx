@@ -5,7 +5,7 @@ interface HomeTitleProps {
 const HomeTitle = ({ label }: HomeTitleProps) => {
   return (
     <div>
-      <span className="text-4xl font-semibold text-blogSoftRed">
+      <span className="text-4xl font-bold font-stylish text-blogSoftRed">
         {label}
       </span>
     </div>
