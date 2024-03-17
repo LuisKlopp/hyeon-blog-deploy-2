@@ -1,18 +1,16 @@
 import ThemeChanger from "./theme-changer";
 import NavigationItem from "./navigation-item";
 import { NAVIGATION_ITEMS } from "./constants/navigation.constants";
-import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const NavigationHeader = () => {
   return (
     <header className="w-full h-16 flex justify-between items-center px-8">
-      <div
-        className={cn(
-          `font-kyobo text-2xl font-black`,
-        )}
-      >
-        Ryu Hyeon
-      </div>
+      <Link href="/">
+        <span className="font-kyobo text-2xl font-black">
+          Ryu Hyeon
+        </span>
+      </Link>
       <nav className="flex w-[250px] h-full items-center justify-between text-center space-x-2 font-semibold gap-4">
         {NAVIGATION_ITEMS.map((item) => (
           <NavigationItem

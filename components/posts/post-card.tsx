@@ -2,7 +2,7 @@ import { Calendar } from "lucide-react";
 import Link from "next/link";
 import { formatDate } from "@/lib/utils";
 import Image from "next/image";
-import KopLogo from "@/public/koplogo.png";
+import Swiss from "@/public/swiss.png";
 
 interface PostItemProps {
   slug: string;
@@ -18,27 +18,26 @@ export function PostCard({
   date,
 }: PostItemProps) {
   return (
-    <article className="border-2 rounded-lg shadow-lg">
-      <Link href={slug}>
-        <div>
-          <Image
-            alt="image"
-            src={KopLogo}
-            priority
-          />
-        </div>
-        <div className="flex flex-col p-2 gap-2">
+    <Link href={slug}>
+      <article className="border-2 rounded-lg shadow-lg hover:scale-105 transition ease-linear min-h-80">
+        <Image
+          alt="image"
+          src={Swiss}
+          priority
+          className="rounded-t-lg h-52 w-full"
+        />
+        <div className="flex flex-col p-4 min-h-44 justify-between">
           <div>
-            <h2 className="text-xl font-bold line-clamp-2">
+            <h2 className="text-lg font-bold line-clamp-2">
               {title}
             </h2>
           </div>
-          <div className="text-muted-foreground line-clamp-2">
+          <div className="text-sm text-muted-foreground line-clamp-2">
             {description}
           </div>
-          <div className="flex justify-between items-center">
+          <div>
             <dl>
-              <dd className="text-sm sm:text-base font-medium flex items-center gap-1">
+              <dd className="text-sm sm:text-base flex items-center gap-1">
                 <Calendar className="h-4 w-4" />
                 <time dateTime={date}>
                   {formatDate(date)}
@@ -47,7 +46,7 @@ export function PostCard({
             </dl>
           </div>
         </div>
-      </Link>
-    </article>
+      </article>
+    </Link>
   );
 }
