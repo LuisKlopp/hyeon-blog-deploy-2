@@ -1,8 +1,6 @@
-import { posts } from "#site/content";
-import { PostCard } from "@/components/posts/post-card";
+import PostList from "@/components/posts/post-list";
 
 const BlogPage = async () => {
-  const displayPosts = posts;
   return (
     <div className="container max-w-4xl py-6 lg:py-10">
       <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
@@ -16,30 +14,7 @@ const BlogPage = async () => {
         </div>
       </div>
       <hr className="mt-8" />
-      {displayPosts?.length > 0 ? (
-        <ul className="flex flex-col">
-          {displayPosts.map((post) => {
-            const {
-              slug,
-              date,
-              title,
-              description,
-            } = post;
-            return (
-              <li key={slug}>
-                <PostCard
-                  slug={slug}
-                  date={date}
-                  title={title}
-                  description={description}
-                />
-              </li>
-            );
-          })}
-        </ul>
-      ) : (
-        <p>Nothing to see here yet</p>
-      )}
+      <PostList />
     </div>
   );
 };
