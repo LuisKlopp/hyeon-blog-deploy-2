@@ -11,7 +11,7 @@ const NavigationHeader = () => {
           Ryu Hyeon
         </span>
       </Link>
-      <nav className="flex w-[250px] h-full items-center justify-between text-center space-x-2 font-semibold gap-4">
+      <nav className="flex w-[250px] h-full items-center justify-between text-center space-x-2 font-semibold gap-4 text-lg">
         {NAVIGATION_ITEMS.map((item) => (
           <NavigationItem
             key={item.title}

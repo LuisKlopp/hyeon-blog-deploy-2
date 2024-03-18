@@ -19,7 +19,7 @@ export function PostCard({
 }: PostItemProps) {
   return (
     <Link href={slug}>
-      <article className="border-2 rounded-lg shadow-lg hover:scale-105 transition ease-linear min-h-80">
+      <article className="border rounded-lg hover:scale-105 hover:shadow-lg transition ease-linear min-h-80">
         <Image
           alt="image"
           src={Swiss}

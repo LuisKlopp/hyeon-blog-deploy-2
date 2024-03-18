@@ -25,7 +25,7 @@ const ProfileIntroduction = () => {
             item;
           return (
             <div
-              className="flex gap-2 font-medium"
+              className="flex gap-2 font-medium text-sm"
               key={iconName}
             >
               <LucideIcon name={iconName} />
