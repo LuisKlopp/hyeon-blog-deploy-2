@@ -23,7 +23,6 @@ const config = {
         kyobo: ["var(--font-kyobo)"],
       },
       colors: {
-        opacityWhite: "rgba(0,0,0,0.1)",
         blogBackground: "#ffffff",
         blogThickRed: "#D90416",
         blogSoftRed: "#DC3644",
