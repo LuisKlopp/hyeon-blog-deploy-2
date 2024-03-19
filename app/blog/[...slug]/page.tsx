@@ -10,7 +10,7 @@ interface PostPageProps {
   };
 }
 
-export const getPostFromParams = async (
+const getPostFromParams = async (
   params: PostPageProps["params"],
 ) => {
   const slug = params?.slug?.join("/");
@@ -20,15 +20,6 @@ export const getPostFromParams = async (
 
   return post;
 };
-
-export const generateStaticParams =
-  async (): Promise<
-    PostPageProps["params"][]
-  > => {
-    return posts.map((post) => ({
-      slug: post.slugAsParams.split("/"),
-    }));
-  };
 
 const PostPage = async ({
   params,
