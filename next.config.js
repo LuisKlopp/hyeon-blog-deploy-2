@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-export default {
+module.exports = {
   // othor next config here...
   webpack: (config) => {
     config.plugins.push(
