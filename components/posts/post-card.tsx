@@ -2,7 +2,7 @@ import { Calendar } from "lucide-react";
 import Link from "next/link";
 import { formatDate } from "@/lib/utils";
 import Image from "next/image";
-import Swiss from "@/public/swiss.png";
+import Swiss from "@/public/static/swiss.png";
 
 interface PostItemProps {
   slug: string;

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profileImage from "@/public/me3.png";
+import profileImage from "@/public/static/me3.png";
 import ProfileIntroduction from "./profile-introduction";
 
 const ProfileBanner = () => {
