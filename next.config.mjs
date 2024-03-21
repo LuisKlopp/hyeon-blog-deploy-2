@@ -2,11 +2,7 @@ import { build } from "velite";
 
 /** @type {import('next').NextConfig} */
 export default {
-  experimental: {
-    serverActions: {
-      bodySizeLimit: "100mb",
-    },
-  },
+  // othor next config here...
   webpack: (config) => {
     config.plugins.push(
       new VeliteWebpackPlugin(),
