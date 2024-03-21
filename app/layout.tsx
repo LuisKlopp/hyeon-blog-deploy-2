@@ -7,7 +7,7 @@ import {
   dovemayo,
   kyobo,
   pretendard,
-} from "@/public/fonts/fonts";
+} from "@/assets/fonts/fonts";
 import MainLayout from "@/components/main-layout";
 
 export default function RootLayout({
