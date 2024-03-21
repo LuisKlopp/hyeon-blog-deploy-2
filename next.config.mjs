@@ -1,8 +1,15 @@
-import { build } from "velite";
-
 /** @type {import('next').NextConfig} */
 export default {
-  // othor next config here...
+  images: {
+    imageSizes: [8],
+    deviceSizes: [640, 720, 1280, 1600],
+  },
+  logging: {
+    fetches: { fullUrl: true },
+  },
+  experimental: {
+    typedRoutes: true,
+  },
   webpack: (config) => {
     config.plugins.push(
       new VeliteWebpackPlugin(),
@@ -13,16 +20,7 @@ export default {
 
 class VeliteWebpackPlugin {
   static started = false;
-  constructor(
-    /** @type {import('velite').Options} */ options = {},
-  ) {
-    this.options = options;
-  }
-  apply(
-    /** @type {import('webpack').Compiler} */ compiler,
-  ) {
-    // executed three times in nextjs !!!
-    // twice for the server (nodejs / edge runtime) and once for the client
+  apply(compiler) {
     compiler.hooks.beforeCompile.tapPromise(
       "VeliteWebpackPlugin",
       async () => {
@@ -30,11 +28,8 @@ class VeliteWebpackPlugin {
         VeliteWebpackPlugin.started = true;
         const dev =
           compiler.options.mode === "development";
-        this.options.watch =
-          this.options.watch ?? dev;
-        this.options.clean =
-          this.options.clean ?? !dev;
-        await build(this.options); // start velite
+        const { build } = await import("velite");
+        await build({ watch: dev, clean: !dev });
       },
     );
   }
