@@ -1,5 +1,5 @@
 import { posts } from "#site/content";
-import { MDXContent } from "@/components/mdx-components";
+// import { MDXContent } from "@/components/mdx-components";
 import { notFound } from "next/navigation";
 
 import "@/styles/mdx.css";
@@ -73,7 +73,7 @@ export default async function PostPage({
         </p>
       ) : null}
       <hr className="my-4" />
-      <MDXContent code={post.body} />
+      {/* <MDXContent code={post.body} /> */}
     </article>
   );
 }
