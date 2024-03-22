@@ -1,4 +1,4 @@
-import PostList from "@/components/posts/post-list";
+// import PostList from "@/components/posts/post-list";
 import ProfileBanner from "@/components/profile/profile-banner";
 
 const HomePage = () => {
@@ -8,7 +8,7 @@ const HomePage = () => {
       <h1 className="text-3xl font-bold text-blogThickRed mt-12">
         Recent Posts
       </h1>
-      <PostList />
+      {/* <PostList /> */}
     </div>
   );
 };
