@@ -1,4 +1,4 @@
-// import PostList from "@/components/posts/post-list";
+import PostList from "@/components/posts/post-list";
 
 const BlogPage = async () => {
   return (
@@ -14,7 +14,7 @@ const BlogPage = async () => {
         </div>
       </div>
       <hr className="mt-8" />
-      {/* <PostList /> */}
+      <PostList />
     </div>
   );
 };
