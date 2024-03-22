@@ -21,7 +21,7 @@ const computedFields = <
 
 const posts = defineCollection({
   name: "Post",
-  pattern: "blog/**/*.mdx",
+  pattern: "blog/*.mdx",
   schema: s
     .object({
       slug: s.path(),
