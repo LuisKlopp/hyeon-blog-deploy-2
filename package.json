@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev:content": "velite --watch",
-    "build:content": "velite --clean",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
